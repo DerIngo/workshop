@@ -120,6 +120,26 @@
           </systemPropertyVariables>
         </configuration>
       </plugin>
+      <plugin>
+        <groupId>org.spdx</groupId>
+        <artifactId>spdx-maven-plugin</artifactId>
+        <!-- please check for updates on https://search.maven.org/search?q=a:spdx-maven-plugin -->
+        <version>0.6.5</version>
+        <executions>
+            <execution>
+                <id>build-spdx</id>
+                <goals>
+                    <goal>createSPDX</goal>
+                </goals>
+            </execution>
+        </executions>
+        <configuration>
+          <excludedFilePatterns>
+            <excludedFilePattern>*.spdx</excludedFilePattern>
+          </excludedFilePatterns>
+          <!-- See documentation below for additional configuration -->
+        </configuration>
+      </plugin>
     </plugins>
   </build>
   <profiles>
