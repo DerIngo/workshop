@@ -1,6 +1,5 @@
 package de.quinscape;
 
-import jakarta.websocket.OnOpen;
 import io.quarkus.websockets.next.OnTextMessage;
 import io.quarkus.websockets.next.WebSocket;
 
@@ -12,12 +11,6 @@ public class ChatSocket {
 
     public ChatSocket(Assistant assistant) {
         this.assistant = assistant;
-    }
-
-    @OnOpen
-    public String onOpen() {
-        System.out.println("onOpen: ");
-        return "Hello, how can I help you?";
     }
 
     @OnTextMessage
