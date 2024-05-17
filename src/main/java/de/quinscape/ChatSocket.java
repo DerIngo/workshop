@@ -11,13 +11,13 @@ public class ChatSocket {
     private final Assistant assistant;
 
     public ChatSocket(Assistant assistant) {
-        System.out.println("ChatSocket: "+assistant);
         this.assistant = assistant;
     }
 
     @OnOpen
     public String onOpen() {
-        return "Hello from Miles of Smiles, how can we help you?";
+        System.out.println("onOpen: ");
+        return "Hello, how can I help you?";
     }
 
     @OnTextMessage
